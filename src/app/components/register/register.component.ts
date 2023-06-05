@@ -64,7 +64,7 @@ export class RegisterComponent implements OnInit {
       .subscribe(() => {
         alert('Sign Up Successfully');
         this.signUpForm.reset();
-        this.router.navigate(['/login']);
+        this.router.navigate(['/home']);
       });
   }
 
