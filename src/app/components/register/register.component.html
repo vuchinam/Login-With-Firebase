@@ -1,0 +1,77 @@
+<div class="container-form">
+  <div class="register-form">
+    <div class="form-group-left">
+      <h1>Sign Up!</h1>
+      <h5>Register your email & password !!</h5>
+      <form [formGroup]="signUpForm" (ngSubmit)="submit()">
+        <mat-form-field class="form-input">
+          <input
+            matInput
+            placeholder="Enter your name"
+            formControlName="name"
+            type="text"
+          />
+          <mat-error class="form-error" *ngIf="name?.errors?.['required']"
+            >Name is required</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field class="form-input">
+          <input
+            matInput
+            placeholder="Enter your email"
+            formControlName="email"
+            type="text"
+          />
+          <mat-error class="form-error" *ngIf="email?.errors?.['required']"
+            >Email is required</mat-error
+          >
+          <mat-error class="form-error" *ngIf="email?.errors?.['email']"
+            >Please enter a correct email format</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field class="form-input">
+          <input
+            matInput
+            placeholder="Password"
+            formControlName="password"
+            type="password"
+          />
+          <mat-error class="form-error" *ngIf="password?.errors?.['required']"
+            >Password is required</mat-error
+          >
+        </mat-form-field>
+        <mat-form-field class="form-input">
+          <input
+            matInput
+            placeholder="Confirm Password"
+            formControlName="confirmPassword"
+            type="password"
+          />
+          <mat-error
+            class="form-error"
+            *ngIf="confirmPassword?.errors?.['required']"
+            >Confirm password is required</mat-error
+          >
+        </mat-form-field>
+        <mat-error
+          class="form-error-2"
+          *ngIf="signUpForm.errors?.['passwordDontMatch']"
+          >Passwords should match</mat-error
+        >
+        <button class="btn" mat-raised-button color="primary" type="submit">
+          Sign Up
+        </button>
+        <span class="page-title"
+          >I already have an account ? <a routerLink="/login">Sign In!</a></span
+        >
+      </form>
+    </div>
+
+    <div class="form-group-right">
+      <img
+        src="https://images.unsplash.com/photo-1684697526198-d1b2c88755fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
+        alt="img"
+      />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+.mat-toolbar.mat-primary {
+  justify-content: space-between;
+  background: #d4a373;
+  color: #fff;
+  width: 100%;
+}
+
+.mat-toolbar-row,
+.mat-toolbar-single-row {
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 16px;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.account-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+  mat-icon {
+    margin: 0 8px;
+  }
+}
+
+.account-triggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-image-toolbar {
+  border-radius: 100%;
+  margin-right: 8px;
+  object-fit: cover;
+  object-position: center;
+}
